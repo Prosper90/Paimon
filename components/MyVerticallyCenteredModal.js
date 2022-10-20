@@ -80,7 +80,7 @@ const startProject = async (e) => {
     const check = await checkifemployerexist.json();
 
     if(check.user == null) {
-            //create a worker
+            //create an employer
                 const createuseremployer = await fetch(`https://paimon-backend.herokuapp.com/user`, 
                 {
                     method: 'POST',   
@@ -96,7 +96,7 @@ const startProject = async (e) => {
 
 
     //initialize project
-    //create project for worker
+    //create project for worker and employer
     const createproject = await fetch(`https://paimon-backend.herokuapp.com/user/createproject`, 
     {
         method: 'POST',   
@@ -119,6 +119,7 @@ const startProject = async (e) => {
 
 
     //create project for employer
+    /*
     const createprojectemployer = await fetch(`https://paimon-backend.herokuapp.com/user/createproject`, 
     {
         method: 'POST',   
@@ -137,7 +138,7 @@ const startProject = async (e) => {
                   })
     } );
     await createprojectemployer.json();
-
+*/
 
 
     setbg("success");
