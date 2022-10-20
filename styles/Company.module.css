@@ -1,0 +1,19 @@
+
+.holdbutton {
+    display: flex;
+    justify-content: flex-start;
+    gap: 9px;
+}
+
+
+.secondsection {
+    background-color: #FFFFFF;
+    padding: 53px;
+}
+
+
+
+.thirdsection {
+    background: linear-gradient(#f3f4f7, #f4f5f7) no-repeat 0;
+    height: 300px;
+}

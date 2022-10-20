@@ -14,3 +14,62 @@ a {
 * {
   box-sizing: border-box;
 }
+
+
+
+
+.containform {
+display: flex;
+justify-content: center;
+}
+
+
+.form {
+  float: left;
+  width: 430px;
+  margin-top: 30px;
+}
+
+
+.form .cfield {
+  float: left;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+  margin-bottom: 19px;
+  border: 2px solid #e8ecec;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  border-radius: 8px;
+  padding-right: 5px;
+}
+
+
+
+.cfield input {
+  float: left;
+  width: 100%;
+  background: no-repeat;
+  margin: 0;
+  font-family: Open Sans;
+  font-size: 13px;
+  color: #474747;
+  padding: 16px 45px 16px 15px;
+  border: none;
+  outline: none;
+}
+
+
+.form button {
+  width: 100%;
+  height: 55px;
+  border: none;
+  outline: none;
+  border-radius: 7px;
+  background-color: #141f72;
+  color: #FFFFFF;
+}

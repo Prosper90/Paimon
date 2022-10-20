@@ -1,0 +1,31 @@
+.signup {
+
+    padding: 8px 10px;
+    border: 1px solid #23262f;
+    border-radius: 80px;
+    font-size: 12px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+}
+
+
+.balancesect {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+
+.walleticon {
+    font-size: 16px;
+}
+
+
+.pai {
+    font-weight: 700;
+    font-size: 15px;
+    color: #343a40;;
+}

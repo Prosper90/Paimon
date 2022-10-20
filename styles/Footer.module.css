@@ -1,0 +1,156 @@
+.footerContainer {
+    background: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 33px 33px 26px 33px;
+    color: #000;
+}
+
+
+.otherlinks {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    /* padding: 0px 11px; */
+    gap: 9%;
+    flex-wrap: wrap;
+}
+
+
+.firstrow {
+    display: flex;
+    justify-content: flex-end;
+    /* gap: 31%; */
+    width: 60%;
+    /* gap: 52px; */
+    /* padding: 20px; */
+    /*flex-wrap: wrap;*/
+}
+
+
+.eachfootercolumn {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 0px 36px;
+    text-align: start;
+}
+
+
+
+.header {
+    color: #888888;
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 700;
+}
+
+
+
+.otheritems {
+    color: #888888;
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 400;
+}
+
+
+
+
+.bottomside {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    padding-top: 20px;
+    color: #888888;
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    border-top: 1px solid #888888;
+    margin-top: 10px;
+}
+
+
+.firstpart {
+    display: flex;
+    justify-content: space-evenly;
+    width: 48%;
+}
+
+
+.otheritemscontain {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    font-size: 13px;
+}
+
+
+.companydescription {
+    color: #888888;
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+}
+
+
+.follow {
+    margin-bottom: 26px;
+}
+
+
+
+
+@media screen and (max-width: 991px) {
+
+    .otherlinks {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+
+
+    .firstrow {
+        display: flex;
+        justify-content: flex-start;
+        /* gap: 31%; */
+        width: 100%;
+        /* gap: 52px; */
+        /* padding: 20px; */
+        flex-wrap: wrap;         
+    }
+
+
+    .eachfootercolumn {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin: 22px 36px 0px 0px;
+        text-align: start;
+    }
+
+
+
+}
+
+
+@media screen and (max-width: 815px) {
+
+    .firstrow {
+        display: flex;
+        justify-content: flex-start;
+        /* gap: 31%; */
+        width: 100%;
+        /* gap: 52px; */
+        /* padding: 20px; */
+        /* flex-wrap: wrap; */
+    }
+
+}

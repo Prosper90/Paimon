@@ -1,0 +1,23 @@
+.workercontainer {
+    background: linear-gradient(#f3f4f7, #f4f5f7) no-repeat 0;
+}
+
+
+#container {
+    height: 500px;
+    margin-top: 51px;
+    padding: 22px;
+}
+
+
+.Address {
+    font-weight: 600;
+    font-size: 22px;
+    margin-right: 20px;
+}
+
+
+
+.headerSide {
+    font-size: 19px;
+}
