@@ -26,14 +26,26 @@ const [modalShow, setModalShow] = React.useState(false);
 console.log(props.worker);
 
 const setDatas = () => {
+
+    const totaljobs = props.project.filter(data => {
+        if(data.worker == props.worker.address) {
+            return true;
+        }
+
+        return false;
+    }).length;
     
-    setTotaljobs(props.worker.Projects.length);
+    setTotaljobs(totaljobs);
+
 
     //get completed
-    const completed = props.worker.Projects.filter(data => {
+    const completed = props.projects.filter(data => {
+
+      if(data.worker == props.worker.address){
         if (data.status == "done") {
           return true;
         }
+      }
       
         return false;
       }).length;
@@ -42,9 +54,11 @@ const setDatas = () => {
 
 
     //get pending
-    const pending = props.worker.Projects.filter(data => {
-        if (data.status == "pending") {
-            return true;
+    const pending = props.project.filter(data => {
+        if(data.worker == props.worker.address){
+                if (data.status == "pending") {
+                    return true;
+                }
         }
         
         return false;
@@ -55,10 +69,11 @@ const setDatas = () => {
 
 
     //get pending
-    const failed = props.worker.Projects.filter(data => {
-
-        if (data.status == "failed") {
-            return true;
+    const failed = props.project.filter(data => {
+        if(data.worker == props.worker.address){
+                if (data.status == "failed") {
+                    return true;
+                }
         }
         
         return false;
@@ -280,9 +295,9 @@ useEffect(() => {
                         
                     <div class="row mt-2">
 
-                         { props.worker.Projects.map((data, index) => {
+                { props.project.map((data, index) => {
 
-                            if(index !== 3) {
+                   if(data.worker === props.worker.address) {
 
                         return ( <div className="row" key={index}>
                                     <div className="col">
@@ -367,12 +382,16 @@ export async function getServerSideProps(context) {
      const res = await fetch(`https://paimon-backend.herokuapp.com/user/${params.index}`, options)
      const tuser = await res.json();
 
-     //console.log(tuser);
+    //get all projects
+    const projects = await fetch(`https://paimon-backend.herokuapp.com/projects`, options)
+    const currentProject = await projects.json();
+
 
   
   return {
     props: {
         worker: tuser.user,
+        projects: currentProject.project
     },
   }
   

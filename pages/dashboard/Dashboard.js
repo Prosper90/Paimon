@@ -20,6 +20,8 @@ export default function Dashboard() {
   const [taskinprogress, setTaskinprogress] = useState("0");
   //project stats
   const [projectcompletion, setProjectcompletion] = useState(0);
+  //project itself
+  const [project, setProject] = useState([]);
 
   //user account
   const [currentuser, setCurrentUser] = useState();
@@ -60,25 +62,37 @@ const setTasks = async () => {
 
     const res = await fetch(`https://paimon-backend.herokuapp.com/user/${address}`, options)
     const userobject = await res.json();
-    console.log(userobject);
+    //console.log(userobject);
     setCurrentUser(userobject.user);
+
+
+
+
+    //get all projects
+    const projects = await fetch(`https://paimon-backend.herokuapp.com/projects`, options)
+    const currentProject = await projects.json();
+    setProject(currentProject.project);
 
     let completedtasks = 0;
     let incompletetasks = 0;
 
 
-    if(userobject.user.length == 0) {
+    if(currentProject.project.length == 0) {
         setTaskcoompeted("0");
         setTaskinprogress("0");
     }
 
-    userobject.user.Projects.map((data, index) => {
+    currentProject.project.map((data, index) => {
 
-       if(data.status === "done") {
-          completedtasks++;
-       } else if(data.status === "pending") {
-          incompletetasks++
-       }
+     if(data.worker == address){
+
+        if(data.status === "done") {
+            completedtasks++;
+        } else if(data.status === "pending") {
+            incompletetasks++
+        }
+
+      }
 
 
     })
@@ -88,7 +102,7 @@ const setTasks = async () => {
 
 
 
-    const calc = userobject.user.Projects.filter(data => {
+    const calc = currentProject.project.filter(data => {
 
         if (data.status == "failed") {
             return true;
@@ -98,7 +112,7 @@ const setTasks = async () => {
         }).length;
 
 
-        //setProjectcompletion((calc * 100)/100);
+        setProjectcompletion((calc * 100)/100);
 
 }
   
@@ -277,9 +291,9 @@ const setTasks = async () => {
                         </div>
 
 
-                    {currentuser?.Projects.map((data, index) => { 
+                    {project?.map((data, index) => { 
 
-                     if(index !== 3) {
+                     if(data.worker == address) {
 
                 return (  <div className="mb-2 row" key={index}>
                             <div className="col">
