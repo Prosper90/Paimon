@@ -8,7 +8,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 export default function Company() {
 
-
+/* eslint-disable @next/next/no-img-element */
 
 
    useEffect(()=>{
