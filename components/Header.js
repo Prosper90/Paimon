@@ -57,7 +57,7 @@ export default function Header() {
     const getUser = async () => {
         const options = {method: 'GET'};
 
-        const res = await fetch(`http://localhost:8000/user/${address}`, options)
+        const res = await fetch(`https://paimon-backend.herokuapp.com/user/${address}`, options)
         const user = await res.json();
         console.log(user);
         setCheckuser(user.user);

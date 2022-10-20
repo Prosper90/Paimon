@@ -364,7 +364,7 @@ export async function getServerSideProps(context) {
    
     const options = {method: 'GET'};
   
-     const res = await fetch(`http://localhost:8000/user/${params.index}`, options)
+     const res = await fetch(`https://paimon-backend.herokuapp.com/user/${params.index}`, options)
      const tuser = await res.json();
 
      //console.log(tuser);

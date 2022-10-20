@@ -58,7 +58,7 @@ const setTasks = async () => {
     console.log("Called o oo oh oh oh oh");
     const options = {method: 'GET'};
 
-    const res = await fetch(`http://localhost:8000/user/${address}`, options)
+    const res = await fetch(`https://paimon-backend.herokuapp.com/user/${address}`, options)
     const userobject = await res.json();
     console.log(userobject);
     setCurrentUser(userobject.user);
@@ -372,7 +372,7 @@ const setTasks = async () => {
                         </ul>
                     </div>
                     <div className="text-lg-end mt-2 mt-lg-0 col-lg-auto">
-                        <p className="fs-14 mb-0">2022 © Prompt. All rights reserved. Crafted by <a href="https://coderthemes.com/">Coderthemes</a></p>
+                        <p className="fs-14 mb-0">2022 © Prompt. All rights reserved. Crafted by <Link href="/"><a>Paimon</a></Link></p>
                     </div>
                 </div>
             </div>

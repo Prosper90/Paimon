@@ -63,7 +63,7 @@ export default function Search() {
 
 
     //check if user already exists
-    const  checkifuserexist = await fetch(`http://localhost:8000/user/${address}`, { method: 'GET' })
+    const  checkifuserexist = await fetch(`https://paimon-backend.herokuapp.com/user/${address}`, { method: 'GET' })
     const checkseller = await checkifuserexist.json();
 
     if(checkseller.user !== null) {
@@ -77,7 +77,7 @@ export default function Search() {
 
 
     //create a worker
-    const createuserbuyer = await fetch(`http://localhost:8000/user`, 
+    const createuserbuyer = await fetch(`https://paimon-backend.herokuapp.com/user`, 
         {
             method: 'POST',   
             headers: {
@@ -132,7 +132,7 @@ export default function Search() {
 
 
     //check if user already exists
-    const  checkifworkerexist = await fetch(`http://localhost:8000/user/${workeraddress}`, { method: 'GET' })
+    const  checkifworkerexist = await fetch(`https://paimon-backend.herokuapp.com/user/${workeraddress}`, { method: 'GET' })
     const check = await checkifworkerexist.json();
 
     if(check.user == null) {
