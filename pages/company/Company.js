@@ -48,24 +48,19 @@ export default function Company() {
                         <div class="swiper swiper-partner">
                             <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <a href="#"
-                                ><img src="/partner1.png" alt=""/></a>
+                                <img src="/partner1.png" alt=""/>
                             </div>
                             <div class="swiper-slide">
-                                <a href="#"
-                                ><img src="/partner2.png" alt=""/></a>
+                                 <img src="/partner2.png" alt=""/>
                             </div>
                             <div class="swiper-slide">
-                                <a href="#"
-                                ><img src="/partner3.png" alt=""/></a>
+                                    <img src="/partner3.png" alt=""/>
                             </div>
                             <div class="swiper-slide">
-                                <a href="#"
-                                ><img src="/partner4.png" alt=""/></a>
+                                    <img src="/partner4.png" alt=""/>
                             </div>
                             <div class="swiper-slide">
-                                <a href="#"
-                                ><img src="/partner5.png" alt=""/></a>
+                                    <img src="/partner5.png" alt=""/>
                             </div>
                             </div>
                         </div>

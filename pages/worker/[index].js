@@ -284,7 +284,7 @@ useEffect(() => {
 
                             if(index !== 3) {
 
-                        return ( <div className="row">
+                        return ( <div className="row" key={index}>
                                     <div className="col">
                                         <div className="mb-0 card">
                                             <div className="card-body">
