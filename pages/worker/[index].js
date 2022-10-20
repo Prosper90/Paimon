@@ -161,7 +161,7 @@ useEffect(() => {
 
                             { props.worker.Projects.map((data, index) => (
 
-                                    <ul class="list-inline py-0  d-flex justify-content-between col-12 p-3">
+                             <ul class="list-inline py-0  d-flex justify-content-between col-12 p-3" key={index}>
                                                                     
 
                                     <li class="list-inline-item mb-sm-0 mb-2 me-sm-2">

@@ -281,7 +281,7 @@ const setTasks = async () => {
 
                      if(index !== 3) {
 
-                return (  <div className="mb-2 row">
+                return (  <div className="mb-2 row" key={index}>
                             <div className="col">
                                 <div className="mb-0 card">
                                     <div className="card-body">
