@@ -89,6 +89,14 @@ export default function Search() {
     );
       await createuserbuyer.json();
 
+
+
+      setbg("success");
+      setMessage("Registered as worker");
+      setMini("success");
+      setShow(true);
+      return;
+
   }
 
 
@@ -185,7 +193,7 @@ export default function Search() {
 
                             <form className={styles.secondForm} data-type="select-one" tabindex="0" role="combobox" aria-autocomplete="list" aria-haspopup="true" aria-expanded="false" onSubmit={registeruser}>
 
-                                 <input type="search" name="jobskill" id="job-title" className={styles.secondinput} placeholder=" Input your job type" />
+                                 <input type="search" name="jobskill" id="job-title" className={styles.secondinput} placeholder=" Input your job skill" />
                                 <div className={styles.buttoncontainer}>
                                   <button className="btn btn-primary" type='submit' >Submit</button>
                                 </div>
