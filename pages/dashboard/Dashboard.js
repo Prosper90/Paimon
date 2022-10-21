@@ -26,6 +26,8 @@ export default function Dashboard() {
   //user account
   const [currentuser, setCurrentUser] = useState();
 
+        /* global BigInt */
+
 
   const getContract = async () => {
     //console.log("bad guy called");
@@ -131,7 +133,7 @@ const setTasks = async () => {
     //check if wallet is connected
      const Contract = await getContract();
      const balance = await Contract.balanceOf(address);
-      setTokenbalance(balance);
+      setTokenbalance(String(BigInt(balance)));
 
    };
 

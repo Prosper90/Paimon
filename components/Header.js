@@ -59,8 +59,7 @@ export default function Header() {
 
         const res = await fetch(`https://paimon-backend.herokuapp.com/user/${address}`, options)
         const user = await res.json();
-        console.log(user);
-        setCheckuser(user.user);
+        setCheckuser( await user.user);
     }
     
     
@@ -269,9 +268,8 @@ export default function Header() {
 
            setWindoweth(window.ethereum);
 
-           if(address) {
+
             getUser();
-           }
 
 
         }, [address]);
@@ -339,7 +337,7 @@ return (
 
                             <Link  href="/company/Company">
                                 <a  data-rr-ui-event-key="/" class="nav-link">
-                                  <div class="d-flex align-items-center"><span class="icon-xxs me-1 flex-shrink-0"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-list icon-dual-dark"><g><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></g></svg></span>
+                                  <div class="d-flex align-items-center"><span class="icon-xxs me-1 flex-shrink-0"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" strokeLinejoin="round" class="feather feather-list icon-dual-dark"><g><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></g></svg></span>
                                       <div class="flex-grow-1">Company</div>
                                   </div>
                                 </a>
@@ -431,7 +429,7 @@ return (
 
                         <Link  href="/company/Company">
                             <a  data-rr-ui-event-key="/" class="nav-link">
-                                <div class="d-flex align-items-center"><span class="icon-xxs me-1 flex-shrink-0"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-list icon-dual-dark"><g><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></g></svg></span>
+                                <div class="d-flex align-items-center"><span class="icon-xxs me-1 flex-shrink-0"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" strokeLinejoin="round" class="feather feather-list icon-dual-dark"><g><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></g></svg></span>
                                     <div class="flex-grow-1">Company</div>
                                 </div>
                             </a>
