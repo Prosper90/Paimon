@@ -172,13 +172,14 @@ useEffect(() => {
                             </ul>
 
 
-                         <div class="align-items-center pt-1 overflow-auto" style= {{ height: '80px' }} >
+         <div class="align-items-center pt-1 overflow-auto" style= {{ height: '80px' }} >
 
-                            { props.worker.Projects.map((data, index) => (
+            { props.project?.map((data, index) => {
 
-                             <ul class="list-inline py-0  d-flex justify-content-between col-12 p-3" key={index}>
+              if(data.worker === props.worker.address) {
+
+                        return(  <ul class="list-inline py-0  d-flex justify-content-between col-12 p-3" key={index}>
                                                                     
-
                                     <li class="list-inline-item mb-sm-0 mb-2 me-sm-2">
                                         <a class="text-muted fs-14" href="/pages/account/dashboard">
                                             { shortenAddress(data.employer) }
@@ -193,15 +194,17 @@ useEffect(() => {
 
 
                                     </ul>
-
-                            ))}
-
-
-
-
+                                    )
+                                }
+                           })
+                     }
 
 
-                       </div>
+
+
+
+
+            </div>
 
 
 
@@ -295,7 +298,7 @@ useEffect(() => {
                         
                     <div class="row mt-2">
 
-                { props.project.map((data, index) => {
+                { props.project?.map((data, index) => {
 
                    if(data.worker === props.worker.address) {
 

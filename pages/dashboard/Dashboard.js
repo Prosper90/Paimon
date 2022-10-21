@@ -82,7 +82,7 @@ const setTasks = async () => {
         setTaskinprogress("0");
     }
 
-    currentProject.project.map((data, index) => {
+    currentProject.project?.map((data, index) => {
 
      if(data.worker == address){
 
@@ -280,7 +280,9 @@ const setTasks = async () => {
                     </div>
                 </div>
 
+        
 
+        {}
                 <div className="row">
                     <div className="col-lg-12">
                         <div className="row">
@@ -291,7 +293,7 @@ const setTasks = async () => {
                         </div>
 
 
-                    {project?.map((data, index) => { 
+                { project?.map((data, index) => { 
 
                      if(data.worker == address) {
 
@@ -370,6 +372,11 @@ const setTasks = async () => {
 
                     </div>
                 </div>
+
+
+
+
+
             </div>
         </section>
         <section className="section py-4 position-relative">
