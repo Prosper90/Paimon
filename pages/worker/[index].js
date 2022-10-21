@@ -27,7 +27,7 @@ console.log(props.worker);
 
 const setDatas = () => {
 
-    const totaljobs = props.project.filter(data => {
+    const totaljobs = props.project?.filter(data => {
         if(data.worker == props.worker.address) {
             return true;
         }
@@ -39,7 +39,7 @@ const setDatas = () => {
 
 
     //get completed
-    const completed = props.projects.filter(data => {
+    const completed = props.projects?.filter(data => {
 
       if(data.worker == props.worker.address){
         if (data.status == "done") {
@@ -54,7 +54,7 @@ const setDatas = () => {
 
 
     //get pending
-    const pending = props.project.filter(data => {
+    const pending = props.project?.filter(data => {
         if(data.worker == props.worker.address){
                 if (data.status == "pending") {
                     return true;
@@ -69,7 +69,7 @@ const setDatas = () => {
 
 
     //get pending
-    const failed = props.project.filter(data => {
+    const failed = props.project?.filter(data => {
         if(data.worker == props.worker.address){
                 if (data.status == "failed") {
                     return true;

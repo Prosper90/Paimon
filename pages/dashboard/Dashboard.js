@@ -102,7 +102,7 @@ const setTasks = async () => {
 
 
 
-    const calc = currentProject.project.filter(data => {
+    const calc = currentProject.project?.filter(data => {
 
         if (data.status == "failed") {
             return true;
