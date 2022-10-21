@@ -297,7 +297,7 @@ return (
             <div class="container">
 
                   <div  class="logo navbar-brand">
-                      <Link  href="/"><a><h4>Header</h4></a></Link>
+                      <Link  href="/"><a><h4>Paimon</h4></a></Link>
                   </div>
 
 
